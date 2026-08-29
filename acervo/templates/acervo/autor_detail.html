@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ autor.nome }}
+{% endblock title %}
+
+{% block content %}
+  <h1>{{ autor.nome }}</h1>
+  <ul>
+    <li><strong>Nome:</strong> {{ autor.nome }}</li>
+    <li><strong>Email:</strong> {{ autor.email }}</li>
+    <li><strong>Data de nascimento:</strong> {{ autor.data_nascimento }}</li>
+  </ul>
+  <a href="{% url 'autor_list' %}">Voltar para lista de autores</a>
+{% endblock %}
