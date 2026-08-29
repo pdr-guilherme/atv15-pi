@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Meu Site</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Autores</a></li>
+          <li><a href="#">Livros</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <hr>
+  </body>
+</html>
