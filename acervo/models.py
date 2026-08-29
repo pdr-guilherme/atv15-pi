@@ -13,8 +13,8 @@ class Autor(models.Model):
 
     class Meta:
         ordering = ("nome", "id")
-        verbose_name = _("livro")
-        verbose_name_plural = _("livros")
+        verbose_name = _("autor")
+        verbose_name_plural = _("autores")
 
     def __str__(self):
         return self.nome
