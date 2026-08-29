@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Livros
+{% endblock title %}
+
+{% block content %}
+<h1>Livros</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Data de lançamento</th>
+      <th>Editora</th>
+      <th>Autor</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for livro in livros %}
+    <tr>
+      <td>{{ livro.titulo }}</td>
+      <td>{{ livro.data_lancamento }}</td>
+      <td>{{ livro.editora }}</td>
+      <td>{{ livro.autor }}</td>
+      <td><a href="{% url 'livro_detail' livro.pk %}">Ver detalhes</a></td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="5">Nenhum livro cadastrado.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
